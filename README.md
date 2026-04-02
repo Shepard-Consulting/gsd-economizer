@@ -1,4 +1,4 @@
-# GSD Economical
+﻿# GSD Economical
 
 **Stop burning Opus tokens on boilerplate. Save 50-70% on your GSD builds.**
 
@@ -14,7 +14,7 @@ One command. Reads your roadmap, classifies every phase, configures the routing,
 
 ## The Problem
 
-GSD defaults to `balanced` profile: Opus for planning, Sonnet for execution. That's smart — but it's the same profile whether you're scaffolding a Dockerfile or building a real-time pipeline.
+GSD defaults to `balanced` profile: Opus for planning, Sonnet for execution. That's smart â€” but it's the same profile whether you're scaffolding a Dockerfile or building a real-time pipeline.
 
 You're running Opus on tasks where Haiku could do the job.
 
@@ -24,10 +24,10 @@ GSD Economical classifies each phase into four complexity tiers and assigns the 
 
 | Tier | What It Builds | Model | Effort | Cost vs Opus |
 |------|---------------|-------|--------|-------------|
-| **1 — Scaffolding** | Config, setup, boilerplate | Sonnet | low | ~80% cheaper |
-| **2 — Standard** | CRUD, components, tests | Sonnet | medium | ~55% cheaper |
-| **3 — Complex** | Multi-system integration | Opus | high | Baseline |
-| **4 — Architectural** | System design decisions | Opus | max | ~2x baseline |
+| **1 â€” Scaffolding** | Config, setup, boilerplate | Sonnet | low | ~80% cheaper |
+| **2 â€” Standard** | CRUD, components, tests | Sonnet | medium | ~55% cheaper |
+| **3 â€” Complex** | Multi-system integration | Opus | high | Baseline |
+| **4 â€” Architectural** | System design decisions | Opus | max | ~2x baseline |
 
 **Result:** A 7-phase build that might cost ~$21 on all-Opus runs for ~$8-10 with Economical routing. On Claude Max, that means fewer rate limit hits and longer uninterrupted sessions.
 
@@ -37,26 +37,26 @@ GSD Economical classifies each phase into four complexity tiers and assigns the 
 
 ```bash
 # Clone into your .claude directory
-git clone https://github.com/shepard-consulting/gsd-economical.git /tmp/gsd-economical
+git clone https://github.com/Shepard-Consulting/gsd-economizer.git /tmp/gsd-economizer
 
 # Copy the plugin files
-cp -r /tmp/gsd-economical/commands/gsd/economical.md ~/.claude/commands/gsd/
+cp /tmp/gsd-economizer/commands/gsd/economical.md ~/.claude/commands/gsd/
 mkdir -p ~/.claude/gsd-economical
-cp -r /tmp/gsd-economical/workflows ~/.claude/gsd-economical/
-cp -r /tmp/gsd-economical/references ~/.claude/gsd-economical/
+cp -r /tmp/gsd-economizer/workflows/economical.md ~/.claude/gsd-economical/
+cp -r /tmp/gsd-economizer/references/classification-rules.md ~/.claude/gsd-economical/
 
 # Clean up
-rm -rf /tmp/gsd-economical
+rm -rf /tmp/gsd-economizer
 ```
 
 Or for a single project:
 
 ```bash
 # From your project root
-cp -r /tmp/gsd-economical/commands/gsd/economical.md .claude/commands/gsd/
+cp /tmp/gsd-economizer/commands/gsd/economical.md .claude/commands/gsd/
 mkdir -p .claude/gsd-economical
-cp -r /tmp/gsd-economical/workflows .claude/gsd-economical/
-cp -r /tmp/gsd-economical/references .claude/gsd-economical/
+cp -r /tmp/gsd-economizer/workflows/economical.md .claude/gsd-economical/
+cp -r /tmp/gsd-economizer/references/classification-rules.md .claude/gsd-economical/
 ```
 
 **Requires:** GSD installed (`npx get-shit-done-cc@latest`)
@@ -126,13 +126,13 @@ The classifier reads each phase description in `ROADMAP.md` and matches against 
 A 7-phase build (similar to a CRM/pipeline dashboard):
 
 ```
-Phase 1: Foundation (schema, seed data)        → Tier 2 → Sonnet @ medium
-Phase 2: Core API (CRUD endpoints)             → Tier 2 → Sonnet @ medium
-Phase 3: Pipeline Integration (webhooks, sync)  → Tier 3 → Opus @ high
-Phase 4: Dashboard UI (React components)        → Tier 2 → Sonnet @ medium
-Phase 5: Real-time Updates (websockets)         → Tier 3 → Opus @ high
-Phase 6: Auth & Permissions (RBAC)              → Tier 3 → Opus @ high
-Phase 7: Deployment (Railway, Docker)           → Tier 1 → Sonnet @ low
+Phase 1: Foundation (schema, seed data)        â†’ Tier 2 â†’ Sonnet @ medium
+Phase 2: Core API (CRUD endpoints)             â†’ Tier 2 â†’ Sonnet @ medium
+Phase 3: Pipeline Integration (webhooks, sync)  â†’ Tier 3 â†’ Opus @ high
+Phase 4: Dashboard UI (React components)        â†’ Tier 2 â†’ Sonnet @ medium
+Phase 5: Real-time Updates (websockets)         â†’ Tier 3 â†’ Opus @ high
+Phase 6: Auth & Permissions (RBAC)              â†’ Tier 3 â†’ Opus @ high
+Phase 7: Deployment (Railway, Docker)           â†’ Tier 1 â†’ Sonnet @ low
 
 Opus phases: 3/7 (43%)
 Sonnet phases: 4/7 (57%)
@@ -153,7 +153,7 @@ The CLAUDE.md block includes an escalation rule: if a task fails 3 times on Sonn
 
 **Does this change GSD itself?**
 
-No. This is a plugin — it adds one slash command and writes config files. GSD core is untouched. When GSD updates, your Economical config stays intact.
+No. This is a plugin â€” it adds one slash command and writes config files. GSD core is untouched. When GSD updates, your Economical config stays intact.
 
 **What about Haiku?**
 
@@ -163,7 +163,7 @@ GSD's `budget` profile already uses Haiku for verification. Economical doesn't c
 
 ## Built By
 
-**[Shepard Consulting](https://shepardconsulting.ai)** — AI automation for businesses that build things.
+**[Shepard Consulting](https://shepardconsulting.ai)** â€” AI automation for businesses that build things.
 
 We help contractors, trades businesses, and real estate operators implement AI systems that save time and money. GSD Economical is how we run our own builds.
 
@@ -173,4 +173,5 @@ Want us to set up your AI development workflow? [Let's talk.](https://shepardcon
 
 ## License
 
-MIT — same as GSD core. Use it, fork it, ship it.
+MIT â€” same as GSD core. Use it, fork it, ship it.
+
